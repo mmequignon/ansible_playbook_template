@@ -1,0 +1,5 @@
+---
+
+- hosts: sample_group
+  roles:
+      - role: sample_role

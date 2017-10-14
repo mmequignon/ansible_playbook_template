@@ -1,0 +1,6 @@
+#!/bin/sh
+#export ANSIBLE_SSH_ARGS="-F $HOME/.ssh/config"
+export ANSIBLE_SCP_IF_SSH=y
+playbook=$1
+shift
+ansible-playbook -c ssh -i inventory playbooks/$playbook.yml -l $@
