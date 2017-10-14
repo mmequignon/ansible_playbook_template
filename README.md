@@ -8,7 +8,9 @@ Steps to follow
    Most of the time, you will need root access. The remote user should be root, or a sudoer.  
    To use the playbook with less interactions, the sudoer account should be able to use sudo without password.  
 
-2. Modify the user mentionned in group\_vars depending on the remote user (as explained previously).  
+   The remote host should have some requirements installed like `python` and `python-apt`.
+
+2. Modify the user mentionned in `group\_vars/all.yml` depending on the remote user (as explained previously).  
    In this folder, you will define some variables that will be passed to specific groups.  
    For example, to use the user `foo` for the hosts group `bar`, create a `bar.yml` file containing this line.  
    ```yaml
@@ -35,5 +37,5 @@ Steps to follow
 
 5. to execute the playbook, use the `deploy_host` script:  
    ```bash
-       ./deploy_host sample_playbook groups   
+   ./deploy_host sample_playbook groups   
    ```
