@@ -2,4 +2,4 @@
 sample_group
 
 [sample_group]
-sample_host
+sample_host ansible_ssh_host=foo_bar.tld
